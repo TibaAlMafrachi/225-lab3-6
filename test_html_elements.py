@@ -32,9 +32,6 @@ def test_h5_tag_content(self):
     self.assertEqual("Lab 3-6 Works!", h5_text, "The <h5> tag does not contain the text 'Lab 3-6 Works!'")
 
 
-        
-        # Assert that the text of the <h5> tag is "Lab 3-6 Works!"
-        self.assertEqual("Lab 3-6 Works!", h5_text, "The <h5> tag does not contain the text 'Lab 3-6 Works!'")
 
     def tearDown(self):
         self.driver.quit()
