@@ -30,7 +30,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /almafrtk6(/|$)(.")
         pathType: ImplementationSpecific
         backend:
           service:
