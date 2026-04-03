@@ -14,22 +14,25 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: cithit/almarftk:latest            #<-------------change this!!!!
+        image: cithit/almarftk: latest            #<-------------change this!!!!
         ports:
         - containerPort: 80  # Expose NGINX on port 80        
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx
+  name: almafrtk-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
-  rules: 
-  - host: 
-    http:
+  rules:
+  - http:
       paths:
       - path: /
         pathType: ImplementationSpecific
-        backend: 
+        backend:
           service:
             name: dev-service
             port:
