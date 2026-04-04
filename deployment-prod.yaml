@@ -27,7 +27,7 @@ spec:
   - host: 
     http:
       paths:
-      - path: /
+      - path: /almafrtk6-prod(/|$)(.*)
         pathType: ImplementationSpecific
         backend: 
           service:
@@ -41,7 +41,7 @@ metadata:
   name: prod-service
 spec:
   type: LoadBalancer 
-  loadBalancerIP: 10.48.228.100                                     # <-----change this!!!!
+  loadBalancerIP: 10.48.229.215                                     # <-----change this!!!!
   ports:
   - protocol: TCP
     port: 80
